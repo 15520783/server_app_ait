@@ -1,0 +1,45 @@
+{
+  "name": "news",
+  "plural": "news",
+  "base": "base-model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idNews": {
+      "type": "number",
+      "required": true,
+      "max": 10
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "max": 450
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "max": 100
+    },
+    "content": {
+      "type": "string",
+      "required": true,
+      "max": 9000
+    },
+    "classify": {
+      "type": "string",
+      "required": true,
+      "max": 100
+    },
+    "postedDate": {
+      "type": "date",
+      "required": true,
+      "max": 9000
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

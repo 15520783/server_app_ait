@@ -1,0 +1,25 @@
+{
+  "name": "job_require_resume",
+  "plural": "job_require_resume",
+  "base": "base-model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idRequireResume": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    },
+    "idJob": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

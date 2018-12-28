@@ -1,0 +1,39 @@
+{
+  "name": "base-model",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "create_by": {
+      "type": "string"
+    },
+    "create_at": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "update_by": {
+      "type": "string"
+    },
+    "update_at": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "del_flag": {
+      "type": "string",
+      "required": true,
+      "default": "0"
+    },
+    "version": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

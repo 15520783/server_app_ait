@@ -1,0 +1,25 @@
+{
+  "name": "job_benifits",
+  "plural": "job_benifits",
+  "base": "base-model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idBenifits": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    },
+    "idJob": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

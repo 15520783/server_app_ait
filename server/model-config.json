@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "ait_data"
+  },
+  "AccessToken": {
+    "dataSource": "ait_data",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "ait_data",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "ait_data",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "ait_data",
+    "public": false
+  },
+  "news": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "base-model": {
+    "dataSource": "ait_data",
+    "public": false
+  },
+  "infomation": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "job": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "job_descrip": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "job_require_job": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "job_require_resume": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "job_benifits": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "descrip": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "require_job": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "require_resume": {
+    "dataSource": "ait_data",
+    "public": true
+  },
+  "benefits": {
+    "dataSource": "ait_data",
+    "public": true
+  }
+}

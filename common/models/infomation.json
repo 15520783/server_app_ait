@@ -1,0 +1,34 @@
+{
+  "name": "infomation",
+  "plural": "infomation",
+  "base": "base-model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "descriptInfo": {
+      "type": "string",
+      "required": true,
+      "default": "\"\""
+    },
+    "address": {
+      "type": "string",
+      "default": "\"\""
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "default": "\"\""
+    },
+    "contact": {
+      "type": "string",
+      "required": true,
+      "default": "\"\""
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

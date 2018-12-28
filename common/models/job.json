@@ -1,0 +1,48 @@
+{
+  "name": "job",
+  "plural": "job",
+  "base": "base-model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idJob": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "max": 450
+    },
+    "position": {
+      "type": "string",
+      "required": true,
+      "max": 450
+    },
+    "skill": {
+      "type": "string",
+      "required": true,
+      "max": 1000
+    },
+    "postedDate": {
+      "type": "date",
+      "required": true
+    },
+    "expiredDate": {
+      "type": "date",
+      "required": true
+    },
+    "poster": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

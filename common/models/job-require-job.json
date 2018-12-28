@@ -1,0 +1,25 @@
+{
+  "name": "job_require_job",
+  "plural": "job_require_job",
+  "base": "base-model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idRequireJob": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    },
+    "idJob": {
+      "type": "string",
+      "required": true,
+      "max": 10
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

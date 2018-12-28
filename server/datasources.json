@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ait_data": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "postgres://postgres:postgre@localhost:5432/ait_data",
+    "database": "ait_data",
+    "password": "postgre",
+    "name": "ait_data",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}
