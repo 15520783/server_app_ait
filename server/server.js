@@ -4,9 +4,46 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var app = module.exports = loopback();
 var bodyParser = require('body-parser');
+var API_PATH = require('../common/const.js').API_PATH;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  if (req.method === 'GET' && req.url !== API_PATH.LOGIN && req.url !== API_PATH.CHECK_ACCESS) {
+    return next();
+  }else{
+    middlewareCheckToken(req, res, app.models, next);
+  }
+  
+});
+
+function middlewareCheckToken(req, res, model, next) {
+
+  const tokenId = req.body.tokenId || req.get('tokenId');
+  model.AccessToken.findById(tokenId, function (err, token) {
+    let error = {
+      statusCode: 401,
+      name: "Error",
+      message: "Authorization Required",
+      code: "AUTHORIZATION_REQUIRED"
+    }
+
+    if (err) {
+      res.status(error.statusCode).send(error);
+      return next();
+    }
+
+    if (!token) {
+      error.message = "Missing token"
+      res.status(error.statusCode).send(error);
+      return next();
+    }
+
+    req.userId = token.userId;
+    return next();
+  });
+}
 
 app.start = function() {
   // start the web server

@@ -7,9 +7,13 @@
     "validateUpsert": true
   },
   "properties": {
-    "descrip": {
+    "description": {
       "type": "string",
       "required": true
+    },
+    "idjob":{
+      "type":"string",
+      "required":true
     }
   },
   "validations": [],

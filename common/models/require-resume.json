@@ -7,12 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "idRequireResume": {
+    "requirement": {
       "type": "string",
-      "required": true,
-      "max":10
+      "required": true
     },
-    "requireResume": {
+    "idjob":{
       "type": "string",
       "required": true
     }

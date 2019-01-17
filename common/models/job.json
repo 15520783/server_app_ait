@@ -24,7 +24,8 @@
     },
     "postedDate": {
       "type": "date",
-      "required": true
+      "required": true,
+      "defaultFn": "now"
     },
     "expiredDate": {
       "type": "date",
@@ -37,7 +38,28 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "descrip": {
+      "type": "hasMany",
+      "model": "descrip",
+      "foreignKey": "idjob"
+    },
+    "requireJob": {
+      "type": "hasMany",
+      "model": "require_job",
+      "foreignKey": "idjob"
+    },
+    "requireResume": {
+      "type": "hasMany",
+      "model": "require_resume",
+      "foreignKey": "idjob"
+    },
+    "benefit": {
+      "type": "hasMany",
+      "model": "benefits",
+      "foreignKey": "idjob"
+    }
+  },
   "acls": [],
   "methods": {}
 }

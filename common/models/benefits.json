@@ -7,7 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "benefits": {
+    "benefit": {
+      "type": "string",
+      "required": true
+    },
+    "idjob":{
       "type": "string",
       "required": true
     }

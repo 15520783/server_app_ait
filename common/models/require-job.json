@@ -7,14 +7,13 @@
     "validateUpsert": true
   },
   "properties": {
-    "idRequireJob": {
-      "type": "string",
-      "required": true,
-      "max":10
-    },
-    "requireJob": {
+    "requirement": {
       "type": "string",
       "required": true
+    },
+    "idjob":{
+      "type":"string",
+      "required":true
     }
   },
   "validations": [],
